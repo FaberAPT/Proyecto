@@ -28,7 +28,7 @@
 
     <!-- Web Services  -->
     <string name="url">http://192.168.1.30/silos/</string>
-    <string name="url_remota">https://wwwkubocom.000webhostapp.com/</string>
+    <string name="url_web">https://wwwkubocom.000webhostapp.com/</string>
     <string name="ws_inicio_sesion_user">inicio_sesion.php?user=</string>
     <string name="ws_inicio_sesion_pwd">pwd=</string>
     <string name="ws_consulta_formulas">consulta_formulas.php</string>
@@ -39,6 +39,7 @@
     <string name="ws_parametro_2">parametro_2=</string>
     <string name="ws_parametro_3">parametro_3=</string>
     <string name="barra_progreso_consulta">Consultado información...</string>
+    <string name="barra_progreso_validacion">Validando credenciales de acceso...</string>
     <string name="error_conexion">NO se ha podido establecer conexión con el servidor </string>
 
     <!-- Titulos -->
@@ -50,6 +51,7 @@
     <string name="estado_mayusculas">ESTADO</string>
     <string name="orden_mayusculas">ORDEN</string>
     <string name="porcentaje_mayusculas">PORC(%)</string>
+    <string name="dosificacion_mayusculas">DOSIF.</string>
     <string name="componente_mayusculas">COMPONENTE</string>
     <string name="cantidad_mayusculas">CANTIDAD</string>
     <string name="fecha_mayusculas">FECHA</string>
@@ -63,30 +65,38 @@
     <string name="densidad_mayusculas">DENSIDAD</string>
     <string name="peso_especifico_mayusculas">PESO ESPECIFICO</string>
     <string name="comentarios_mayuscula">COMENTARIOS</string>
+    <string name="silos_mayuscula">SILOS</string>
+
+    <!-- Datos Empresa -->
+    <string name="nombre">Nombre :</string>
+    <string name="cif_empresa">CIF :</string>
+    <string name="direccion_empresa">Dirección :</string>
+    <string name="codigo_postal">C.Postal :</string>
+    <string name="provincia_empresa">Provincia :</string>
+    <string name="silos_principales">Principales</string>
+    <string name="silos_correctores">Correctores</string>
+    <string name="silos_liquidos">Líquidos</string>
+    <string name="silos_almacen">Almacén</string>
+    <string name="silos_expedicion">Expedición</string>
 
 
-    <string name="nombre">Nombre : </string>
-    <string name="fecha">Fecha : </string>
-    <string name="fecha_modificacion">Fecha Modificación : </string>
+    <string name="fecha">Fecha :</string>
+    <string name="fecha_modificacion">Fecha Modificación :</string>
     <string name="tipo">Tipo : </string>
-    <string name="tipo_componente">Tipo de Componente : </string>
-    <string name="componente">Componente : </string>
-    <string name="estado">Estado : </string>
-    <string name="empresa">Empresa : </string>
-    <string name="vehiculo">Vehículo : </string>
-    <string name="conductor">Conductor : </string>
-    <string name="cantidad">Cantidad : </string>
-    <string name="Material">Material : </string>
-    <string name="numero_silo">Número de Silo : </string>
-    <string name="inspeccion_visual">Inspección Visual : </string>
-    <string name="presentacion">Presentación : </string>
-    <string name="lote_proveedor">Lote del Proveedor : </string>
-    <string name="densidad">Densidad : </string>
-    <string name="peso_especifico">Peso Específico : </string>
-    <string name="cometarios">Comentarios : </string>
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tipo_componente">Tipo de Componente :</string>
+    <string name="componente">Componente :</string>
+    <string name="estado">Estado :</string>
+    <string name="empresa">Empresa :</string>
+    <string name="vehiculo">Vehículo :</string>
+    <string name="conductor">Conductor :</string>
+    <string name="cantidad">Cantidad :</string>
+    <string name="Material">Material :</string>
+    <string name="numero_silo">Número de Silo :</string>
+    <string name="inspeccion_visual">Inspección Visual :</string>
+    <string name="presentacion">Presentación :</string>
+    <string name="lote_proveedor">Lote del Proveedor :</string>
+    <string name="densidad">Densidad :</string>
+    <string name="peso_especifico">Peso Específico :</string>
+    <string name="cometarios">Comentarios :</string>
 
 </resources>

@@ -35,7 +35,7 @@ public class FormulaAdapter extends RecyclerView.Adapter<FormulaAdapter.Formulas
     public void onBindViewHolder(FormulasHolder holder, final int position)
     {
         holder.txtNombreFormula.setText(listaFormulas.get(position).getNombreFormula());
-        holder.txtEstadoFormula.setText(listaFormulas.get(position).getEstadoFormula() == 1 ? "Activa   " : "Inactiva");
+        holder.txtEstadoFormula.setText(listaFormulas.get(position).getEstadoFormula());
     }
 
     @Override

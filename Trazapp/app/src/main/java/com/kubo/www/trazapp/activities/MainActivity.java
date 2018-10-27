@@ -22,6 +22,7 @@ import com.kubo.www.trazapp.R;
 import com.kubo.www.trazapp.adapters.ExpandableListAdapter;
 import com.kubo.www.trazapp.fragments.ConsultaFormulasDetalleFragment;
 import com.kubo.www.trazapp.fragments.ConsultaFormulasFragment;
+import com.kubo.www.trazapp.fragments.ConsultaInformacionEmpresaFragment;
 import com.kubo.www.trazapp.fragments.ConsultaRecepcionesComponenteFragment;
 import com.kubo.www.trazapp.fragments.ConsultaRecepcionesDetalleFragment;
 import com.kubo.www.trazapp.fragments.ConsultaRecepcionesTipoComponenteFragment;
@@ -33,7 +34,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
-        ConsultaFormulasFragment.OnFragmentInteractionListener, ConsultaFormulasDetalleFragment.OnFragmentInteractionListener,
+        ConsultaInformacionEmpresaFragment.OnFragmentInteractionListener,
+        ConsultaFormulasFragment.OnFragmentInteractionListener,
+        ConsultaFormulasDetalleFragment.OnFragmentInteractionListener,
         ConsultaRecepcionesTipoComponenteFragment.OnFragmentInteractionListener,
         ConsultaRecepcionesComponenteFragment.OnFragmentInteractionListener,
         ConsultaRecepcionesDetalleFragment.OnFragmentInteractionListener
@@ -49,7 +52,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private HashMap<String, List<String>> listDataChild;
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
+    private Fragment miFragment;
     private View view_Group;
+    private Bundle argumentos;
 
     public static int[] iconos = {R.drawable.icon_recepciones, R.drawable.icon_formulas,
                                   R.drawable.icon_fabricaciones, R.drawable.icon_fabricaciones}; //R.drawable.icon_expediciones};
@@ -67,8 +72,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         expandableListView.addHeaderView(listHeaderView);
         mTitle = mDrawerTitle = getTitle();
 
-//        if (savedInstanceState == null)
-//            selectFirstItemDefault();
+        Bundle bundle = getIntent().getExtras();
+        argumentos = new Bundle();
+
+        argumentos.putString("nombres", bundle.getString("nombres"));
+        argumentos.putString("cif_empresa", bundle.getString("cif_empresa"));
+        argumentos.putString("nombre_empresa", bundle.getString("nombre_empresa"));
+        argumentos.putString("direccion_empresa", bundle.getString("direccion_empresa"));
+        argumentos.putString("provincia_empresa", bundle.getString("provincia_empresa"));
+        argumentos.putString("cpostal_empresa", bundle.getString("cpostal_empresa"));
+
+        if (savedInstanceState == null)
+            selectFirstItemDefault();
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorPrincipalSilos)));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -131,12 +146,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void selectFirstItemDefault()
     {
-/*        if (navigationManager != null)
-        {
-            String firstItem = listTitle.get(0);
-            navigationManager.showFragment(firstItem);
-            getSupportActionBar().setTitle(firstItem);
-        }*/
+        miFragment = new ConsultaInformacionEmpresaFragment();
+        miFragment.setArguments(argumentos);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, miFragment).commit();
+        getSupportActionBar().setTitle("DATOS");
     }
 
     @Override
@@ -206,7 +219,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Fragment miFragment = null;
                 boolean fragmentSeleccionado = false;
 
-                switch (groupPosition) {
+                switch (groupPosition)
+                {
                     // Recepciones
                     case 0:
                         switch (childPosition)

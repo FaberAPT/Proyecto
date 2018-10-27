@@ -11,7 +11,10 @@
         $clave = $_GET['pwd'];
         $conexion = mysqli_connect($hostname, $username, $password, $database);
 
-        $consulta = "SELECT CONCAT(nombre_usuario, ' ' , apellidos_usuario) AS nombres, tipo_usuario FROM usuario WHERE nif_usuario = '{$usuario}' AND password_usuario = '{$clave}'";
+        $consulta = "SELECT a.cif_empresa, a.nombre_empresa, a.direccion_empresa, a.codigo_postal, a.provincia, ".
+                            "CONCAT(b.nombre_usuario, ' ' , b.apellidos_usuario) AS nombres, b.tipo_usuario ".
+                    "FROM informacion_empresa a INNER JOIN usuario b ON (a.cif_empresa = b.cif_empresa) ".
+                    "WHERE b.nif_usuario = '{$usuario}' AND b.password_usuario = '{$clave}'";
         $resultado = mysqli_query($conexion, $consulta);
 
         if($consulta)

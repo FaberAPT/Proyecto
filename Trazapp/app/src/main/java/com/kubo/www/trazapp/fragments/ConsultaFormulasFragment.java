@@ -103,8 +103,8 @@ public class ConsultaFormulasFragment extends Fragment implements Response.Liste
                         bundle.putString("nombre_formula", listaFormulas.get(position).getNombreFormula());
                         bundle.putString("fecha_formula", listaFormulas.get(position).getFechaFormula());
                         bundle.putString("fecha_modificacion", listaFormulas.get(position).getFechaModificacion());
-                        bundle.putInt("tipo_formula", listaFormulas.get(position).getTipoFormula());
-                        bundle.putInt("estado_formula", listaFormulas.get(position).getEstadoFormula());
+                        bundle.putString("tipo_formula", listaFormulas.get(position).getTipoFormula());
+                        bundle.putString("estado_formula", listaFormulas.get(position).getEstadoFormula());
 
                         Fragment detalleFormula = ConsultaFormulasDetalleFragment.newInstance();
                         FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -197,8 +197,8 @@ public class ConsultaFormulasFragment extends Fragment implements Response.Liste
                 formula.setNombreFormula(jsonObject.optString("nombre_formula"));
                 formula.setFechaFormula(fechaFormula[0]);
                 formula.setFechaModificacion(fechaModificacion[0]);
-                formula.setTipoFormula(jsonObject.optInt("tipo_formula"));
-                formula.setEstadoFormula(jsonObject.optInt("estado_formula"));
+                formula.setTipoFormula(jsonObject.optString("tipo_formula"));
+                formula.setEstadoFormula(jsonObject.optString("estado_formula"));
                 listaFormulas.add(formula);
             }
 

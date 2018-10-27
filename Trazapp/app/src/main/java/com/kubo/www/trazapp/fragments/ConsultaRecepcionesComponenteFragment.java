@@ -53,19 +53,15 @@ public class ConsultaRecepcionesComponenteFragment  extends Fragment implements
     RecyclerView recyclerRecepciones;
     ArrayList<Recepcion> listaRecepciones;
     ArrayList<String> arrayComponentes;
-
     ProgressDialog barraProgreso;
+    ConnectivityManager conexion;
+    NetworkInfo networkInfo;
     RequestQueue requestQueue;
     JsonObjectRequest jsonRequest;
-
-    private Spinner spNombreComponente;
-
+    Spinner spNombreComponente;
     ArrayAdapter<String> spinnerAdapter;
 
     public ConsultaRecepcionesComponenteFragment(){}
-
-    ConnectivityManager conexion = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-    NetworkInfo networkInfo = conexion.getActiveNetworkInfo();
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -78,6 +74,8 @@ public class ConsultaRecepcionesComponenteFragment  extends Fragment implements
     {
         final View vista = inflater.inflate(R.layout.fragment_consulta_recepciones_componente, container, false);
 
+        conexion = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        networkInfo = conexion.getActiveNetworkInfo();
 
         arrayComponentes = new ArrayList<>();
         spNombreComponente = (Spinner) vista.findViewById(R.id.spNombreComponente);
@@ -196,23 +194,25 @@ public class ConsultaRecepcionesComponenteFragment  extends Fragment implements
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray=jsonObject.getJSONArray("componente");
 
-                            for(int i=0;i<jsonArray.length();i++)
-                            {
-                                JSONObject jsonObject1=jsonArray.getJSONObject(i);
-                                String nombreComponente = jsonObject1.getString("nombre_componente");
-                                arrayComponentes.add(nombreComponente);
-                            }
-
-                            spinnerAdapter = new ArrayAdapter<String>(getContext(),R.layout.spinner_item, arrayComponentes);
-                            spNombreComponente.setAdapter(spinnerAdapter);
-                        }
-                        catch (JSONException e){e.printStackTrace();}
+                    for(int i = 0; i < jsonArray.length(); i++)
+                    {
+                        JSONObject jsonObject1=jsonArray.getJSONObject(i);
+                        String nombreComponente = jsonObject1.getString("nombre_componente");
+                        arrayComponentes.add(nombreComponente);
                     }
-                }, new Response.ErrorListener()
+
+                    spinnerAdapter = new ArrayAdapter<String>(getContext(),R.layout.spinner_item, arrayComponentes);
+                    spNombreComponente.setAdapter(spinnerAdapter);
+                    barraProgreso.hide();
+                }
+                catch (JSONException e){e.printStackTrace();}
+            }
+        }, new Response.ErrorListener()
         {
             @Override
             public void onErrorResponse(VolleyError error)
             {
+                barraProgreso.hide();
                 error.printStackTrace();
             }
         });
@@ -266,8 +266,8 @@ public class ConsultaRecepcionesComponenteFragment  extends Fragment implements
     @Override
     public void onErrorResponse(VolleyError error)
     {
-  //      Toast.makeText(getContext(), R.string.error_conexion + error.toString(), Toast.LENGTH_LONG).show();
-   //     barraProgreso.hide();
+        Toast.makeText(getContext(), R.string.error_conexion + error.toString(), Toast.LENGTH_LONG).show();
+        barraProgreso.hide();
     }
 
     @Override

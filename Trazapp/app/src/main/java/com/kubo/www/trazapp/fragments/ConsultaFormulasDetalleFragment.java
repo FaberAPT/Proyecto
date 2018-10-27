@@ -80,8 +80,8 @@ public class ConsultaFormulasDetalleFragment extends Fragment implements Respons
 
         nombreFormula.setText(getArguments().getString("nombre_formula"));
         fechaFormula.setText(getArguments().getString("fecha_formula"));
-//        tipoFormula.setText(getArguments().getInt("tipo_formula"));
-        estadoFormula.setText((getArguments().getInt("estado_formula") == 1 ? "Activa" : "Inactiva"));
+        tipoFormula.setText(getArguments().getString("tipo_formula"));
+        estadoFormula.setText(getArguments().getString("estado_formula"));
 
         cargarWebService();
 
@@ -144,7 +144,7 @@ public class ConsultaFormulasDetalleFragment extends Fragment implements Respons
                 componente.setNombreComponente(jsonObject.optString("componente"));
                 componente.setPorcentajeComponente((float) jsonObject.optDouble("porcentaje"));
                 componente.setOrdenComponente(jsonObject.optInt("orden"));
-                componente.setDosificacionComponente(jsonObject.optInt("dosificacion"));
+                componente.setDosificacionComponente(jsonObject.optString("dosificacion"));
                 componente.setTipoComponente(jsonObject.optInt("tipo"));
                 componente.setEstadoCompoenente(jsonObject.optInt("estado"));
                 listaComponentes.add(componente);

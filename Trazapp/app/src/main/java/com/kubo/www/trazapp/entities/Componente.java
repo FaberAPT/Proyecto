@@ -2,8 +2,8 @@ package com.kubo.www.trazapp.entities;
 
 public class Componente
 {
-    private int idFormulaComponente, idFormula, ordenComponente, dosificacionComponente, tipoComponente, estadoCompoenente;
-    private String nombreComponente;
+    private int idFormulaComponente, idFormula, ordenComponente, tipoComponente, estadoCompoenente;
+    private String nombreComponente, dosificacionComponente;
     private float porcentajeComponente;
 
     public int getIdFormulaComponente() { return idFormulaComponente; }
@@ -16,7 +16,7 @@ public class Componente
 
     public int getOrdenComponente() { return ordenComponente; }
 
-    public int getDosificacionComponente() { return dosificacionComponente; }
+    public String getDosificacionComponente() { return dosificacionComponente; }
 
     public int getTipoComponente() { return tipoComponente; }
 
@@ -32,7 +32,7 @@ public class Componente
 
     public void setOrdenComponente(int ordenComponente) { this.ordenComponente = ordenComponente; }
 
-    public void setDosificacionComponente(int dosificacionComponente) { this.dosificacionComponente = dosificacionComponente; }
+    public void setDosificacionComponente(String dosificacionComponente) { this.dosificacionComponente = dosificacionComponente; }
 
     public void setTipoComponente(int tipoComponente) { this.tipoComponente = tipoComponente; }
 

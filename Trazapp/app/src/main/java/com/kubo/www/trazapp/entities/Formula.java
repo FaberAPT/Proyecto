@@ -2,8 +2,8 @@ package com.kubo.www.trazapp.entities;
 
 public class Formula
 {
-    private String nombreFormula, fechaFormula, fechaModificacion;
-    private int idFormula, tipoFormula, estadoFormula;
+    private String nombreFormula, fechaFormula, fechaModificacion, tipoFormula, estadoFormula;
+    private int idFormula;
 
     public int getIdFormula() { return idFormula; }
 
@@ -13,9 +13,9 @@ public class Formula
 
     public String getFechaModificacion() { return fechaModificacion; }
 
-    public int getTipoFormula() { return tipoFormula; }
+    public String getTipoFormula() { return tipoFormula; }
 
-    public int getEstadoFormula() { return estadoFormula; }
+    public String getEstadoFormula() { return estadoFormula; }
 
     public void setIdFormula(int idFormula) { this.idFormula = idFormula; }
 
@@ -25,7 +25,7 @@ public class Formula
 
     public void setFechaModificacion(String fechaModificacion) { this.fechaModificacion = fechaModificacion; }
 
-    public void setTipoFormula(int tipoFormula) { this.tipoFormula = tipoFormula; }
+    public void setTipoFormula(String tipoFormula) { this.tipoFormula = tipoFormula; }
 
-    public void setEstadoFormula(int estadoFormula) { this.estadoFormula = estadoFormula; }
+    public void setEstadoFormula(String estadoFormula) { this.estadoFormula = estadoFormula; }
 }

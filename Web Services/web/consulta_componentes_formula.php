@@ -12,7 +12,9 @@
 
         $conexion = mysqli_connect($hostname, $username, $password, $database);
 
-        $consulta = "SELECT * FROM formula_componente WHERE id_formula = '{$id_formula}' ORDER BY orden";
+        $consulta = "SELECT id_formula_componente, id_formula, componente, porcentaje, orden, ".
+                           "CASE dosificacion WHEN 0 THEN 'No' WHEN 1 THEN 'Si' END AS dosificacion, ".
+                           "tipo, estado FROM formula_componente WHERE id_formula = '{$id_formula}' ORDER BY orden";
         $resultado = mysqli_query($conexion, $consulta);
 
         while($registro = mysqli_fetch_array($resultado))

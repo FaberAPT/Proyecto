@@ -23,7 +23,7 @@ public class ComponenteAdapter extends RecyclerView.Adapter<ComponenteAdapter.Co
     @Override
     public ComponenteAdapter.ComponentesHolder onCreateViewHolder(ViewGroup viewGroup, int viewType)
     {
-        View vista = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.componente_list, viewGroup, false);
+        View vista = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_componentes, viewGroup, false);
         RecyclerView.LayoutParams layoutParams = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         vista.setLayoutParams(layoutParams);
@@ -37,6 +37,7 @@ public class ComponenteAdapter extends RecyclerView.Adapter<ComponenteAdapter.Co
         holder.txtNombreComponente.setText(listaComponentes.get(position).getNombreComponente());
         holder.txtPorcentajeComponente.setText(Float.toString(listaComponentes.get(position).getPorcentajeComponente()));
         holder.txtOrdenComponente.setText(Integer.toString(listaComponentes.get(position).getOrdenComponente()));
+        holder.txtDosificacionComponente.setText(listaComponentes.get(position).getDosificacionComponente());
     }
 
     @Override
@@ -48,7 +49,7 @@ public class ComponenteAdapter extends RecyclerView.Adapter<ComponenteAdapter.Co
 
     public class ComponentesHolder extends RecyclerView.ViewHolder
     {
-        TextView txtNombreComponente, txtPorcentajeComponente, txtOrdenComponente;
+        TextView txtNombreComponente, txtPorcentajeComponente, txtOrdenComponente, txtDosificacionComponente;
 
         public ComponentesHolder(View itemView)
         {
@@ -56,6 +57,7 @@ public class ComponenteAdapter extends RecyclerView.Adapter<ComponenteAdapter.Co
             txtNombreComponente = (TextView) itemView.findViewById(R.id.txtNombreComponente);
             txtPorcentajeComponente = (TextView) itemView.findViewById(R.id.txtPorcentajeComponente);
             txtOrdenComponente = (TextView) itemView.findViewById(R.id.txtOrdenComponente);
+            txtDosificacionComponente = (TextView) itemView.findViewById(R.id.txtDosificacionComponente);
         }
     }
 }

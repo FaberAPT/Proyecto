@@ -9,10 +9,50 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/size_010">
 
+        <TextView
+            android:id="@+id/lblTituloEmpresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="@string/empresa_mayusculas"
+            android:textSize="@dimen/size_020"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/lblTituloEmpresa"
+            android:layout_height="@dimen/size_001"
+            android:background="@color/colorPrincipalSilos"/>
+
         <LinearLayout
-            android:id="@+id/lblNombreFormula"
+            android:id="@+id/lblCifEmpresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/lblTituloEmpresa"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/cif_empresa"
+                android:textSize="@dimen/size_016"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtCifEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:textSize="@dimen/size_016"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lblNombreEmpresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblCifEmpresa"
             android:orientation="horizontal">
 
             <TextView
@@ -24,7 +64,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/txtNombreFormula"
+                android:id="@+id/txtNombreEmpresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".6"
@@ -32,22 +72,22 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lblFechaFormula"
+            android:id="@+id/lblDireccionEmpresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lblNombreFormula"
+            android:layout_below="@+id/lblNombreEmpresa"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="@string/fecha"
+                android:text="@string/direccion_empresa"
                 android:textSize="@dimen/size_016"
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/txtFechaFormula"
+                android:id="@+id/txtDireccionEmpresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".6"
@@ -55,22 +95,22 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lblTipoFormula"
+            android:id="@+id/lblProvinciaEmpresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lblFechaFormula"
+            android:layout_below="@+id/lblDireccionEmpresa"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="@string/tipo"
+                android:text="@string/provincia_empresa"
                 android:textSize="@dimen/size_016"
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/txtTipoFormula"
+                android:id="@+id/txtProvinciaEmpresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".6"
@@ -78,10 +118,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lblEstadoFormula"
+            android:id="@+id/lblCodigoPostalEmpresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lblTipoFormula"
+            android:layout_below="@+id/lblProvinciaEmpresa"
             android:orientation="horizontal"
             android:paddingBottom="@dimen/size_010">
 
@@ -89,12 +129,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="@string/estado"
+                android:text="@string/codigo_postal"
                 android:textSize="@dimen/size_016"
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/txtEstadoFormula"
+                android:id="@+id/txtCodigoPostalEmpresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight=".6"
@@ -105,67 +145,75 @@
             android:id="@+id/separador"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size_001"
-            android:layout_below="@+id/lblEstadoFormula"
+            android:layout_below="@+id/lblCodigoPostalEmpresa"
             android:background="@color/colorSecundarioSilos"/>
 
         <TextView
-            android:id="@+id/lblTituloComponente"
-            android:layout_width="match_parent"
+            android:id="@+id/lblTituloSilos"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/separador"
-            android:background="@color/green_100"
-            android:padding="@dimen/size_005"
             android:layout_centerHorizontal="true"
-            android:text="@string/titulo_componentes"
-            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="@string/silos_mayuscula"
             android:textSize="@dimen/size_016"
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/datosComponentes"
+            android:id="@+id/lblSilos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lblTituloComponente"
-            android:background="@color/green_100"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/size_010"
+            android:layout_below="@+id/lblTituloSilos">
 
             <TextView
-                android:id="@+id/txtnombreFormula"
-                android:layout_width="wrap_content"
+                android:id="@+id/lblSilosPrincipales"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:layout_alignParentLeft="true"
-                android:text="@string/nombre_mayusculas"
+                android:layout_weight="2"
+                android:text="@string/silos_principales"
                 android:textSize="@dimen/size_011"
                 android:textAlignment="center"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPorcentajeComponente"
-                android:layout_width="wrap_content"
+                android:id="@+id/lblSilosCorrectores"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/porcentaje_mayusculas"
+                android:layout_weight="2"
+                android:text="@string/silos_correctores"
                 android:textSize="@dimen/size_011"
                 android:textAlignment="center"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtOrdenComponente"
-                android:layout_width="wrap_content"
+                android:id="@+id/lblSilosLiquidos"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/orden_mayusculas"
+                android:layout_weight="2"
+                android:text="@string/silos_liquidos"
                 android:textSize="@dimen/size_011"
                 android:textAlignment="center"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtDosificacionComponente"
-                android:layout_width="wrap_content"
+                android:id="@+id/lblSilosAlmacen"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/dosificacion_mayusculas"
+                android:layout_weight="2"
+                android:text="@string/silos_almacen"
+                android:textSize="@dimen/size_011"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/lblSilosExpedicion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/silos_expedicion"
                 android:textSize="@dimen/size_011"
                 android:textAlignment="center"
                 android:textStyle="bold" />
@@ -175,7 +223,7 @@
             android:id="@+id/separador_1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size_001"
-            android:layout_below="@+id/datosComponentes"
+            android:layout_below="@+id/lblSilos"
             android:background="@color/colorSecundarioSilos"/>
 
         <android.support.v7.widget.RecyclerView
