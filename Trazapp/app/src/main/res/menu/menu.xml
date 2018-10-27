@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/ayuda"
+        android:title="@string/opAyuda" />
+    <item android:id="@+id/acercaDe"
+        android:icon="@drawable/img_fondo_acerca_de"
+        android:title="@string/opAcercaDe" />
+    <item android:id="@+id/salir"
+        android:icon="@drawable/icon_exit"
+        android:title="@string/opSalir" />
+</menu>

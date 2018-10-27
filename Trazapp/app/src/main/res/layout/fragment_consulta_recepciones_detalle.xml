@@ -1,0 +1,330 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_fondo_degradado"
+    android:orientation="vertical" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_005">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_100"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:text="@string/empresa_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.1"
+                android:text="@string/matricula_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:text="@string/conductor_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_017"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtNombreEmpresa"
+                android:layout_width="match_parent"
+                android:layout_weight="1.3"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtMatriculaVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.1"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtNombreConductor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_100"
+            android:layout_marginTop="@dimen/size_040"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="@string/componente_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/cantidad_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/numero_silo_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_057"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtNombreComponente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtCantidadRecepcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtNumeroSilo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_100"
+            android:layout_marginTop="@dimen/size_080"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/inspeccion_visual_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/presentacion_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/lote_proveedor_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size_097"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtInspeccionVisual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtPresentacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtLoteProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_100"
+            android:layout_marginTop="@dimen/size_120"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/densidad_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/peso_especifico_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/fecha_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size_137"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtDensidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtPesoEspecifico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtFechaRecepcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_100"
+            android:layout_marginTop="@dimen/size_160"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:text="@string/estado_mayusculas"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/comentarios_mayuscula"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size_177"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEstadoRecepcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_010"/>
+
+            <TextView
+                android:id="@+id/txtComentarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/size_010"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

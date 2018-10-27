@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/size_010"
+    android:paddingRight="@dimen/size_010">
+
+    <TextView
+        android:id="@+id/txtNombreComponente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_012"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/txtFechaRecepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_090"
+        android:textSize="@dimen/size_012"
+        android:gravity="left"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/txtCantidadRecepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_010"
+        android:textSize="@dimen/size_012"
+        android:gravity="left"
+        android:layout_alignParentRight="true"/>
+    <!--
+        <TextView
+            android:layout_marginTop="@dimen/size_020"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_001"
+            android:background="@color/colorPrincipalSilos"/>
+    -->
+</RelativeLayout>

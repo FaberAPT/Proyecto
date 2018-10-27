@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_fondo_degradado"
+    android:orientation="vertical" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/lblTituloFormula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="@string/titulo_formula"
+            android:textSize="@dimen/size_020"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/lblTituloFormula"
+            android:layout_height="@dimen/size_001"
+            android:background="@color/colorPrincipalSilos"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblTituloFormula"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"
+                android:textSize="@dimen/size_016"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/txtNombreFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_016"
+                android:layout_weight=".6"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblTituloFormula"
+            android:layout_marginTop="@dimen/size_020"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha"
+                android:textSize="@dimen/size_016"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/txtFechaFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_016"
+                android:layout_weight=".6"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblTituloFormula"
+            android:layout_marginTop="@dimen/size_040"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo"
+                android:textSize="@dimen/size_016"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/txtTipoFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_016"
+                android:layout_weight=".6"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblTituloFormula"
+            android:layout_marginTop="@dimen/size_060"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/estado"
+                android:textSize="@dimen/size_016"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/txtEstadoFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_016"
+                android:layout_weight=".6"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/separador"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/lblTituloFormula"
+            android:layout_marginTop="@dimen/size_090"
+            android:layout_height="@dimen/size_001"
+            android:background="@color/colorSecundarioSilos"/>
+
+        <TextView
+            android:id="@+id/lblTituloComponente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separador"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="@string/titulo_componentes"
+            android:textSize="@dimen/size_016"
+            android:textStyle="bold" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_120"
+            android:paddingLeft="@dimen/size_016"
+            android:paddingRight="@dimen/size_016">
+
+            <TextView
+                android:id="@+id/nombreFormula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_020"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/size_010"
+                android:gravity="center"
+                android:text="@string/nombre_mayusculas"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPorcentajeComponente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_020"
+                android:layout_marginLeft="@dimen/size_140"
+                android:gravity="center"
+                android:text="@string/porcentaje_mayusculas"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtOrdenComponente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_020"
+                android:layout_marginRight="@dimen/size_005"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/orden_mayusculas"
+                android:textSize="@dimen/size_010"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_001"
+            android:layout_below="@+id/lblTituloFormula"
+            android:layout_marginTop="@dimen/size_130"
+            android:background="@color/colorSecundarioSilos"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/idRecycler"
+            android:layout_below="@+id/separador"
+            android:layout_marginTop="@dimen/size_040"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imagenAcercaDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_fondo_acerca_de"/>
+
+    <TextView
+        android:id="@+id/textoaplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_020"
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:textSize="@dimen/size_024"
+        android:textColor="@color/colorPrincipalSilos"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textoversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_020"
+        android:layout_marginTop="@dimen/size_030"
+        android:text="@string/version_app" />
+
+    <TextView
+        android:id="@+id/textodesarrollador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_020"
+        android:layout_marginTop="@dimen/size_010"
+        android:text="@string/desarrollador" />
+
+    <TextView
+        android:id="@+id/textoinstituto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_020"
+        android:layout_marginTop="@dimen/size_010"
+        android:text="@string/instituto_formador" />
+
+    <TextView
+        android:id="@+id/textoderechos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_020"
+        android:layout_marginTop="@dimen/size_010"
+        android:text="@string/derechos_autor" />
+
+</LinearLayout>

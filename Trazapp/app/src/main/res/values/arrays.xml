@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Recepciones</item>
+        <item>Formulas</item>
+        <item>Fabricaciones</item>
+        <item>Expediciones</item>
+    </string-array>
+    <!-- Recepciones -->
+    <string-array name="recepciones">
+        <item>Por Tipo de Componente</item>
+        <item>Por Componente</item>
+        <item>Por Fechas</item>
+    </string-array>
+
+    <!-- Formulas -->
+    <string-array name="formulas">
+        <item>General</item>
+    </string-array>
+
+    <!-- Fabricaciones -->
+    <string-array name="fabricaciones">
+        <item>Por Fechas</item>
+        <item>Por Formula</item>
+    </string-array>
+
+    <!-- Expediciones -->
+    <string-array name="expediciones">
+        <item>Por Fechas</item>
+        <item>Por Formula</item>
+        <item>Por Recepciones</item>
+        <item>Por Fabricaciones</item>
+    </string-array>
+
+</resources>

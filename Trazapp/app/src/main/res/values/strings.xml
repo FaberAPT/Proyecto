@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Trazapp</string>
+
+    <!-- Login Fragment  -->
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_clave">Clave de acceso</string>
+    <string name="boton_inicio_sesion">Iniciar sesión</string>
+    <string name="dialogo_error_title">¡¡¡ Error de Acceso !!!</string>
+    <string name="dialogo_error_mensage">El usuario o la clave de acceso introducidos son incorrectos...</string>
+    <string name="dialogo_error_buttom">Aceptar</string>
+    <string name="dialogo_sin_conexion_title">¡¡¡ Sin Conexión !!!</string>
+    <string name="dialogo_sin_conexion_mensage">Verifique el acceso a internet e intentelo nuevamente...</string>
+
+    <!-- Opciones de Menu -->
+    <string name="opAyuda">Ayuda</string>
+    <string name="opAcercaDe">Acerca De...</string>
+    <string name="opSalir">Salir</string>
+
+    <!-- Navigation Drawer  -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Acerca de -->
+    <string name="version_app">Trazapp 1.0</string>
+    <string name="desarrollador">Desarrollado por : Faber Alberto Peña Trujillo</string>
+    <string name="instituto_formador">Centro de Estudios : IES TRASSIERRA - Córdoba</string>
+    <string name="derechos_autor">Copyright © 2018 - Reservados todos los derechos.</string>
+
+    <!-- Web Services  -->
+    <string name="url">http://192.168.1.30/silos/</string>
+    <string name="url_remota">https://wwwkubocom.000webhostapp.com/</string>
+    <string name="ws_inicio_sesion_user">inicio_sesion.php?user=</string>
+    <string name="ws_inicio_sesion_pwd">pwd=</string>
+    <string name="ws_consulta_formulas">consulta_formulas.php</string>
+    <string name="ws_consulta_componentes">consulta_componentes.php</string>
+    <string name="ws_consulta_componentes_formula">consulta_componentes_formula.php</string>
+    <string name="ws_consulta_recepciones">consulta_recepciones.php</string>
+    <string name="ws_parametro_1">parametro_1=</string>
+    <string name="ws_parametro_2">parametro_2=</string>
+    <string name="ws_parametro_3">parametro_3=</string>
+    <string name="barra_progreso_consulta">Consultado información...</string>
+    <string name="error_conexion">NO se ha podido establecer conexión con el servidor </string>
+
+    <!-- Titulos -->
+    <string name="titulo_formulas">FORMULAS</string>
+    <string name="titulo_formula">FORMULA</string>
+    <string name="titulo_recepciones">RECEPCIONES</string>
+    <string name="titulo_componentes">COMPONENTES</string>
+    <string name="nombre_mayusculas">NOMBRE</string>
+    <string name="estado_mayusculas">ESTADO</string>
+    <string name="orden_mayusculas">ORDEN</string>
+    <string name="porcentaje_mayusculas">PORC(%)</string>
+    <string name="componente_mayusculas">COMPONENTE</string>
+    <string name="cantidad_mayusculas">CANTIDAD</string>
+    <string name="fecha_mayusculas">FECHA</string>
+    <string name="empresa_mayusculas">EMPRESA</string>
+    <string name="matricula_mayusculas">VEHICULO</string>
+    <string name="conductor_mayusculas">CONDUCTOR</string>
+    <string name="numero_silo_mayusculas">No. DE SILO</string>
+    <string name="inspeccion_visual_mayusculas">INSP. VISUAL</string>
+    <string name="presentacion_mayusculas">PRESENTACION</string>
+    <string name="lote_proveedor_mayusculas">LOTE PROVEEDOR</string>
+    <string name="densidad_mayusculas">DENSIDAD</string>
+    <string name="peso_especifico_mayusculas">PESO ESPECIFICO</string>
+    <string name="comentarios_mayuscula">COMENTARIOS</string>
+
+
+    <string name="nombre">Nombre : </string>
+    <string name="fecha">Fecha : </string>
+    <string name="fecha_modificacion">Fecha Modificación : </string>
+    <string name="tipo">Tipo : </string>
+    <string name="tipo_componente">Tipo de Componente : </string>
+    <string name="componente">Componente : </string>
+    <string name="estado">Estado : </string>
+    <string name="empresa">Empresa : </string>
+    <string name="vehiculo">Vehículo : </string>
+    <string name="conductor">Conductor : </string>
+    <string name="cantidad">Cantidad : </string>
+    <string name="Material">Material : </string>
+    <string name="numero_silo">Número de Silo : </string>
+    <string name="inspeccion_visual">Inspección Visual : </string>
+    <string name="presentacion">Presentación : </string>
+    <string name="lote_proveedor">Lote del Proveedor : </string>
+    <string name="densidad">Densidad : </string>
+    <string name="peso_especifico">Peso Específico : </string>
+    <string name="cometarios">Comentarios : </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

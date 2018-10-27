@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_010"
+        android:paddingBottom="@dimen/size_010"
+        android:background="@drawable/encabezado_fragments">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/lblTituloComponente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="@dimen/size_005"
+                android:text="@string/tipo_componente"
+                android:textSize="@dimen/size_012"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spTipoComponente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/size_120"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/separador_1"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/lblTituloComponente"
+                android:paddingTop="@dimen/size_040"
+                android:layout_height="@dimen/size_001"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/Componente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/separador_1"
+                android:layout_marginLeft="@dimen/size_030"
+                android:gravity="center"
+                android:text="@string/componente_mayusculas"
+                android:textSize="@dimen/size_011"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/FechaRecepcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/separador_1"
+                android:layout_marginRight="@dimen/size_100"
+                android:gravity="center"
+                android:text="@string/fecha_mayusculas"
+                android:textSize="@dimen/size_011"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CantidadRecepcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/separador_1"
+                android:gravity="center"
+                android:text="@string/cantidad_mayusculas"
+                android:textSize="@dimen/size_011"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/separador_2"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/FechaRecepcion"
+                android:layout_height="@dimen/size_001"
+                android:background="@color/white"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/idRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_010"/>
+</LinearLayout>

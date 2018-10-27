@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/txtNombreComponente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_010"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/txtPorcentajeComponente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_140"
+        android:textSize="@dimen/size_010"
+        android:gravity="right"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/txtOrdenComponente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_030"
+        android:textSize="@dimen/size_010"
+        android:gravity="left"
+        android:layout_alignParentRight="true"/>
+    <!--
+        <TextView
+            android:layout_marginTop="@dimen/size_020"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_001"
+            android:background="@color/colorPrincipalSilos"/>
+    -->
+</RelativeLayout>

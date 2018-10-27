@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_010"
+        android:paddingBottom="@dimen/size_010"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/encabezado_fragments">
+
+        <TextView
+            android:id="@+id/nombreFormula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/size_050"
+            android:gravity="center"
+            android:text="@string/nombre_mayusculas"
+            android:textSize="@dimen/size_011"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/estadoFormula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_005"
+            android:gravity="center"
+            android:text="@string/estado_mayusculas"
+            android:textSize="@dimen/size_011"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/nombreFormula"
+            android:layout_height="@dimen/size_001"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/idRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_010"/>
+
+</LinearLayout>
